@@ -40,5 +40,10 @@ pipeline{
         bat 'docker tag roomservice:latest class2022/roomservice:latest '
         }
         }
+        stage('login'){
+        steps{
+        bat 'echo | set /p ="***" | docker login --username class2022 --password DEMON@lord00'
+        }
+        }
     }
 }
