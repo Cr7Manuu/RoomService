@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    tools
+    {
+    dockerTool "docker"
+    }
     stages{
     stage('SonarQube analusis'){
             
@@ -21,6 +25,13 @@ pipeline{
         {
         bat "mvn clean install"
         }
+        }
+        }
+        stage('docker build')
+        {
+        steps
+        {
+        bat 'docker build -t roomservice:latest .'
         }
         }
         
