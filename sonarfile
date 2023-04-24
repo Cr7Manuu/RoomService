@@ -47,7 +47,7 @@ pipeline{
         }
         stage('push'){
         steps{
-        bat 'docker push class2022/service-app'
+        bat 'docker push class2022/roomservice:latest'
         }
         }
     }
