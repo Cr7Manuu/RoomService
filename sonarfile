@@ -45,5 +45,10 @@ pipeline{
         bat 'echo | set /p ="***" | docker login --username class2022 --password DEMON@lord00'
         }
         }
+        stage('push'){
+        steps{
+        bat 'docker push class2022/DEMON@lord00'
+        }
+        }
     }
 }
