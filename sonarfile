@@ -34,6 +34,11 @@ pipeline{
         bat 'docker build -t roomservice:latest .'
         }
         }
-        
+        stage('docker image')
+        {
+        steps{
+        bat 'docker tag roomservice:latest class2022/roomservice:latest '
+        }
+        }
     }
 }
