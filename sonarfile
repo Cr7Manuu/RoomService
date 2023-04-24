@@ -47,7 +47,7 @@ pipeline{
         }
         stage('push'){
         steps{
-        bat 'docker push class2022/DEMON@lord00:latest'
+        bat 'docker push class2022/DEMON@lord00'
         }
         }
     }
